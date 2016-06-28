@@ -1,0 +1,20 @@
+{
+  "name": "markup-boilerplate",
+  "description": "",
+  "main": "",
+  "authors": [
+    "dizhetskyi <dizhetskyi@corevalue.net>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.0.0"
+  }
+}
