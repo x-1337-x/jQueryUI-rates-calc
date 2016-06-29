@@ -2,6 +2,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@import url(../../../bower_components/jquery-ui/themes/base/jquery-ui.css);
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -51,14 +52,34 @@ body, html {
 body {
   font: normal 16px/1.4 Arial, sans-serif; }
 
-.p-home {
-  padding: 20px 0; }
+body {
+  background-color: #ccc; }
 
-.p-home--promo {
-  background: #e0e0e0;
-  padding: 20px; }
-
-.p-home--teasers {
-  margin: 20px 0;
+.slider-container {
   padding: 20px;
-  background: #e0e0e0; }
+  margin: 10px auto;
+  background-color: #7AA981;
+  width: 50%;
+  text-align: center;
+  border-radius: 5px; }
+  .slider-container label {
+    display: inline-block;
+    margin: 0 0 10px 0;
+    font-size: 16px;
+    font-weight: 700;
+    color: #83529F; }
+
+.slider-value {
+  padding: 5px;
+  background-color: #284161;
+  width: 50%;
+  margin: 0 auto;
+  color: #fff; }
+
+.income-container {
+  width: 50%;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #5543A2;
+  font-size: 24px;
+  color: #fff; }

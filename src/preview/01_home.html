@@ -9,26 +9,38 @@
 <!-- endbuild -->
 </head>
 <body>  
+  
+  <div class="slider-container">
+    <label for="currency">CURRENCY</label>
+    <div class="slider" id="currency"></div>
+  </div>
+  <div class="slider-value" id="currency-value"></div> 
+  <div class="slider-container">
+    <label for="amount">AMOUNT</label>
+    <div class="slider" id="amount"></div>
+  </div>
+  <div class="slider-value" id="amount-value"></div>
+  <div class="slider-container">
+    <label for="timeSpan">DEPOSIT PERIOD</label>
+    <div class="slider" id="timeSpan"></div>
+  </div>
+  <div class="slider-value" id="timeSpan-value"></div>
 
-  <div class="p-home">
 
-    <div class="p-home--promo">
-      <div class="p-home--promo-title">Title</div>
-      <div class="p-home--promo-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur ut eos qui esse cupiditate obcaecati minus ipsam mollitia ab assumenda sequi excepturi nisi incidunt ducimus laudantium, officia atque enim repudiandae?</div>
-    </div>
-
-    <div class="p-home--teasers">
-      <div class="p-home--teaser">
-        1
-      </div>
-      <div class="p-home--teaser">
-        2
-      </div>
-    </div>
-
+  <div class="income-container">
+    <div class="income" id="income">PROFIT: </div>
   </div>
 
-  <!-- build:js ../static/js/common.js -->
+
+  <!-- build:js ../../bower_components/jquery/dist/jquery.min.js -->
+<script src="../../bower_components/jquery/dist/jquery.min.js"></script>
+<!-- endbuild -->
+
+<!-- build:js ../../bower_components/jquery-ui/jquery-ui.min.js -->
+<script src="../../bower_components/jquery-ui/jquery-ui.min.js"></script>
+<!-- endbuild -->
+
+<!-- build:js ../static/js/common.js -->
 <script src="../static/js/common.js"></script>
 <!-- endbuild -->
 
