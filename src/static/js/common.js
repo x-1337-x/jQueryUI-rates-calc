@@ -56,6 +56,7 @@ $(document).ready(function() {
     max: 3,
     value: currency,
     change: function(event, ui) {
+      currency = 0;
       $("#currency-value").html(getCurrency(ui.value));
       currency = getCurrency($(this).slider('value'));
       $("#income").html(calcIncome());
@@ -71,6 +72,7 @@ $(document).ready(function() {
     max:100000,
     value: amount,
     slide: function(e, ui) {
+      amount = 0;
       $("#amount-value").html(ui.value);
       amount = $(this).slider('value');
       $("#income").html(calcIncome());
@@ -86,6 +88,7 @@ $(document).ready(function() {
     max: 120,
     value: time,
     slide: function(e, ui) {
+      time = 0;
       $("#timeSpan-value").html(ui.value);
       time = $(this).slider('value');
       $("#income").html(calcIncome());

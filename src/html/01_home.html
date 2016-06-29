@@ -3,28 +3,30 @@
 <head>
   @@include('./includes/_head.html')
 </head>
-<body>  
+<body>
+
+  <div class="calculator">
+    <div class="slider-container">
+      <label for="currency">CURRENCY</label>
+      <div class="slider" id="currency"></div>
+    </div>
+    <div class="slider-value" id="currency-value"></div> 
+    <div class="slider-container">
+      <label for="amount">AMOUNT</label>
+      <div class="slider" id="amount"></div>
+    </div>
+    <div class="slider-value" id="amount-value"></div>
+    <div class="slider-container">
+      <label for="timeSpan">DEPOSIT PERIOD</label>
+      <div class="slider" id="timeSpan"></div>
+    </div>
+    <div class="slider-value" id="timeSpan-value"></div>
+
+    <div class="income-container">
+      <div class="income" id="income">PROFIT: </div>
+    </div>
+  </div>
   
-  <div class="slider-container">
-    <label for="currency">CURRENCY</label>
-    <div class="slider" id="currency"></div>
-  </div>
-  <div class="slider-value" id="currency-value"></div> 
-  <div class="slider-container">
-    <label for="amount">AMOUNT</label>
-    <div class="slider" id="amount"></div>
-  </div>
-  <div class="slider-value" id="amount-value"></div>
-  <div class="slider-container">
-    <label for="timeSpan">DEPOSIT PERIOD</label>
-    <div class="slider" id="timeSpan"></div>
-  </div>
-  <div class="slider-value" id="timeSpan-value"></div>
-
-
-  <div class="income-container">
-    <div class="income" id="income">PROFIT: </div>
-  </div>
 
 
   @@include('./includes/_js.html')
