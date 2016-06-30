@@ -11,7 +11,8 @@ $(document).ready(function() {
 
     var currency = 1,
         amount = 100,
-        time = 1;
+        time = 1,
+        income;
 
     function calcIncome() {
       var income = parseInt((amount / 100 * getRate(currency)) * time + getBonus(time));
@@ -117,6 +118,14 @@ $(document).ready(function() {
       $("#timeSpan-value").html($(this).slider('value'));
       time = $(this).slider('value');
       $("#income").html(calcIncome());
+    }
+  });
+
+  $(".slider").slider({
+    change: function(e, ui) {
+      var total = calcIncome() + amount;
+      $('#amount-graph').width(amount/total*100 + '%').text("Deposit: " + amount);
+      $('#summary-graph').width(100 + '%').text("Total: " + total);
     }
   });
 
