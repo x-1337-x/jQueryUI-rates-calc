@@ -51,19 +51,26 @@ $(document).ready(function() {
     }
   }
 
-  $("#currency").slider({
+  $("#currency").slider({ 
     min: 1,
     max: 3,
     value: currency,
-    change: function(event, ui) {
-      currency = 0;
-      $("#currency-value").html(getCurrency(ui.value));
-      currency = getCurrency($(this).slider('value'));
-      $("#income").html(calcIncome());
-    },
     create: function(event, ui) {
       $("#currency-value").html(getCurrency($(this).slider('value')));
       currency = getCurrency($(this).slider('value'));
+      $("#income").html(calcIncome());
+    },
+    change: function(event, ui) {
+      currency = 0;
+      $("#currency-value").html(getCurrency($(this).slider('value')));
+      currency = getCurrency($(this).slider('value'));
+      $("#income").html(calcIncome());
+    },
+    stop: function(event, ui) {
+      currency = 0;
+      $("#currency-value").html(getCurrency($(this).slider('value')));
+      currency = getCurrency($(this).slider('value'));
+      $("#income").html(calcIncome());
     }
   });
 
@@ -71,15 +78,22 @@ $(document).ready(function() {
     min:100,
     max:100000,
     value: amount,
-    slide: function(e, ui) {
-      amount = 0;
-      $("#amount-value").html(ui.value);
-      amount = $(this).slider('value');
-      $("#income").html(calcIncome());
-    },
     create: function(event, ui) {
       $("#amount-value").html($(this).slider('value'));
       amount = $(this).slider('value');
+      $("#income").html(calcIncome());
+    },
+    slide: function(e, ui) {
+      amount = 0;
+      $("#amount-value").html($(this).slider('value'));
+      amount = $(this).slider('value');
+      $("#income").html(calcIncome());
+    },
+    stop: function(event, ui) {
+      amount = 0;
+      $("#amount-value").html($(this).slider('value'));
+      amount = $(this).slider('value');
+      $("#income").html(calcIncome());
     } 
   });
 
@@ -87,20 +101,23 @@ $(document).ready(function() {
     min: 1,
     max: 120,
     value: time,
-    slide: function(e, ui) {
-      time = 0;
-      $("#timeSpan-value").html(ui.value);
-      time = $(this).slider('value');
-      $("#income").html(calcIncome());
-    },
     create: function(event, ui) {
       $("#timeSpan-value").html($(this).slider('value'));
       time = $(this).slider('value');
+      $("#income").html(calcIncome());
+    },
+    slide: function(e, ui) {
+      time = 0;
+      $("#timeSpan-value").html($(this).slider('value'));
+      time = $(this).slider('value');
+      $("#income").html(calcIncome());
+    },
+    stop: function(event, ui) {
+      time = 0;
+      $("#timeSpan-value").html($(this).slider('value'));
+      time = $(this).slider('value');
+      $("#income").html(calcIncome());
     }
   });
-
-  console.log(calcIncome());
-
-  $("#income").html(calcIncome());
 
 });
